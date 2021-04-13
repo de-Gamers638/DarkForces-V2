@@ -9,7 +9,7 @@ namespace Client.Modules
     public class Glide
     {
         public static string Name = "AirJump";
-        public static int key;
+        public static System.Windows.Forms.Keys key = System.Windows.Forms.Keys.C;
         public static bool toggeld;
 
         public static float GlideValue = -0.04f;
