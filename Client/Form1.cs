@@ -50,6 +50,10 @@ namespace Client
             {
                 Modules.TriggerBot.onTick();
             }
+            if (Modules.BounceGlide.toggeld)
+            {
+                Modules.BounceGlide.onTick();
+            }
 
             onLoop();
         }
@@ -91,17 +95,30 @@ namespace Client
                 Modules.Flight.isPressed = false;
             }
 
-            if (Imports.GetAsyncKeyState(Modules.TriggerBot.key) < 0)
+            if (Imports.GetAsyncKeyState(Modules.Glide.key) < 0)
             {
-                if (!Modules.TriggerBot.isPressed)
+                if (!Modules.Glide.isPressed)
                 {
-                    Modules.TriggerBot.Toggle();
-                    Modules.TriggerBot.isPressed = true;
+                    Modules.Glide.Toggle();
+                    Modules.Glide.isPressed = true;
                 }
             }
             else
             {
-                Modules.TriggerBot.isPressed = false;
+                Modules.Glide.isPressed = false;
+            }
+
+            if (Imports.GetAsyncKeyState(Modules.BounceGlide.key) < 0)
+            {
+                if (!Modules.BounceGlide.isPressed)
+                {
+                    Modules.BounceGlide.Toggle();
+                    Modules.BounceGlide.isPressed = true;
+                }
+            }
+            else
+            {
+                Modules.BounceGlide.isPressed = false;
             }
         }
 
@@ -118,6 +135,11 @@ namespace Client
         private void TriggerBot_Click(object sender, EventArgs e)
         {
             Modules.TriggerBot.Toggle();
+        }
+
+        private void BounceFly_Click(object sender, EventArgs e)
+        {
+            Modules.BounceGlide.Toggle();
         }
     }
 }

@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Client.Modules
 {
-    public class Glide
+    public class BounceGlide
     {
         public static string Name = "AirJump";
-        public static System.Windows.Forms.Keys key = System.Windows.Forms.Keys.C;
+        public static System.Windows.Forms.Keys key = System.Windows.Forms.Keys.V;
         public static bool toggeld;
 
-        public static float GlideValue = -0.04f;
         public static bool isPressed;
 
         public static void Toggle()
@@ -39,9 +38,8 @@ namespace Client.Modules
         }
         public static void onTick()
         {
-            Client.Form1.m.WriteMemory(SDK.Entity.VelocityY, "float", GlideValue.ToString());
             Utils.TimeUtil.Tick();
-            if(Utils.TimeUtil.timerHasReached(25, true))
+            if(Utils.TimeUtil.timerHasReached(40, true))
             {
                 Client.Form1.m.WriteMemory(SDK.Entity.VelocityY, "float", "0.5");
             }

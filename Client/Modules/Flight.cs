@@ -45,5 +45,4 @@ namespace Client.Modules
             Client.Form1.m.WriteMemory(SDK.Entity.CanFly, "byte", "1");
         }
     }
-    
 }

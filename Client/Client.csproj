@@ -81,6 +81,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\BounceGlide.cs" />
     <Compile Include="Modules\Glide.cs" />
     <Compile Include="Modules\AirJump.cs" />
     <Compile Include="Modules\AirWalk.cs" />

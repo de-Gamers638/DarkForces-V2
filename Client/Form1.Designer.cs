@@ -43,6 +43,7 @@ namespace Client
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.TriggerBot = new System.Windows.Forms.Button();
+            this.BounceFly = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,6 +80,7 @@ namespace Client
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.Controls.Add(this.BounceFly);
             this.panel1.Controls.Add(this.Flight);
             this.panel1.Controls.Add(this.Glide);
             this.panel1.Controls.Add(this.Movement);
@@ -86,7 +88,7 @@ namespace Client
             this.panel1.Controls.Add(this.AirJump);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(147, 286);
+            this.panel1.Size = new System.Drawing.Size(147, 339);
             this.panel1.TabIndex = 2;
             // 
             // Flight
@@ -181,6 +183,17 @@ namespace Client
             this.TriggerBot.UseVisualStyleBackColor = false;
             this.TriggerBot.Click += new System.EventHandler(this.TriggerBot_Click);
             // 
+            // BounceFly
+            // 
+            this.BounceFly.BackColor = System.Drawing.Color.Red;
+            this.BounceFly.Location = new System.Drawing.Point(17, 275);
+            this.BounceFly.Name = "BounceFly";
+            this.BounceFly.Size = new System.Drawing.Size(115, 51);
+            this.BounceFly.TabIndex = 5;
+            this.BounceFly.Text = "BounceFly";
+            this.BounceFly.UseVisualStyleBackColor = false;
+            this.BounceFly.Click += new System.EventHandler(this.BounceFly_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,6 +236,7 @@ namespace Client
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button TriggerBot;
+        private System.Windows.Forms.Button BounceFly;
     }
 }
 
