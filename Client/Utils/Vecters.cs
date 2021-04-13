@@ -14,6 +14,14 @@ namespace Client.Utils
             public float y;
             public float z;
         }
+        
+        public struct Vec2f
+        {
+            public float x;
+            public float y;
+        }
+            
+        
 
         public static Vec3f directionalVector(float yaw, float pitch)
         {
