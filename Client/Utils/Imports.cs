@@ -12,5 +12,8 @@ namespace Client.Utils
     {
         [DllImport("user32.dll")]
         public static extern short GetAsyncKeyState(Keys vKey);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        public static extern void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
     }
 }

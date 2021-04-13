@@ -29,18 +29,18 @@ namespace Client.Modules
 
         public static void onEnable()
         {
-            Client.Form1.m.WriteMemory(Client.Modules.Actor.IsFlying, "byte", "1");
-            Client.Form1.m.WriteMemory(Client.Modules.Actor.CanFly, "byte", "1");
+            Client.Form1.m.WriteMemory(SDK.Entity.IsFlying, "byte", "1");
+            Client.Form1.m.WriteMemory(SDK.Entity.CanFly, "byte", "1");
         }
         public static void onDisable()
         {
-            Client.Form1.m.WriteMemory(Client.Modules.Actor.IsFlying, "byte", "0");
-            Client.Form1.m.WriteMemory(Client.Modules.Actor.CanFly, "byte", "0");
+            Client.Form1.m.WriteMemory(SDK.Entity.IsFlying, "byte", "0");
+            Client.Form1.m.WriteMemory(SDK.Entity.CanFly, "byte", "0");
         }
         public static void onTick()
         {
-            Client.Form1.m.WriteMemory(Client.Modules.Actor.IsFlying, "byte", "1");
-            Client.Form1.m.WriteMemory(Client.Modules.Actor.CanFly, "byte", "1");
+            Client.Form1.m.WriteMemory(SDK.Entity.IsFlying, "byte", "1");
+            Client.Form1.m.WriteMemory(SDK.Entity.CanFly, "byte", "1");
         }
     }
     

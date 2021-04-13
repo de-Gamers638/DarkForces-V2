@@ -42,32 +42,24 @@ namespace Client
             {
                 Modules.Flight.onTick();
             }
+            if (Modules.Step.toggeld)
+            {
+                Modules.Step.onTick();
+            }
+            if (Modules.TriggerBot.toggeld)
+            {
+                Modules.TriggerBot.onTick();
+            }
 
             onLoop();
         }
         private void AirWalk_Click(object sender, EventArgs e)
         {
             Modules.AirWalk.Toggle();
-            if (Modules.AirWalk.toggeld)
-            {
-                AirWalk.Text = "AirWalk " + "[ON]";
-            }
-            else
-            {
-                AirWalk.Text = "AirWalk " + "[OFF]";
-            }
         }
         private void AirJump_Click(object sender, EventArgs e)
         {
             Modules.AirJump.Toggle();
-            if (Modules.AirJump.toggeld)
-            {
-                AirJump.Text = "AirJump " + "[ON]";
-            }
-            else
-            {
-                AirJump.Text = "AirJump " + "[OFF]";
-            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -77,27 +69,11 @@ namespace Client
         private void Glide_Click(object sender, EventArgs e)
         {
             Modules.Glide.Toggle();
-            if (Modules.Glide.toggeld)
-            {
-                Glide.Text = "Glide " + "[ON]";
-            }
-            else
-            {
-                Glide.Text = "Glide " + "[OFF]";
-            }
         }
 
         private void Flight_Click(object sender, EventArgs e)
         {
             Modules.Flight.Toggle();
-            if (Modules.Flight.toggeld)
-            {
-                Flight.Text = "Flight " + "[ON]";
-            }
-            else
-            {
-                Flight.Text = "Flight " + "[OFF]";
-            }
         }
 
         public void onLoop()
@@ -107,14 +83,6 @@ namespace Client
                 if (!Modules.Flight.isPressed)
                 {
                     Modules.Flight.Toggle();
-                    if (Modules.Flight.toggeld)
-                    {
-                        Flight.Text = "Flight " + "[ON]";
-                    }
-                    else
-                    {
-                        Flight.Text = "Flight " + "[OFF]";
-                    }
                     Modules.Flight.isPressed = true;
                 }
             }
@@ -122,6 +90,34 @@ namespace Client
             {
                 Modules.Flight.isPressed = false;
             }
+
+            if (Imports.GetAsyncKeyState(Modules.TriggerBot.key) < 0)
+            {
+                if (!Modules.TriggerBot.isPressed)
+                {
+                    Modules.TriggerBot.Toggle();
+                    Modules.TriggerBot.isPressed = true;
+                }
+            }
+            else
+            {
+                Modules.TriggerBot.isPressed = false;
+            }
+        }
+
+        private void Step_Click(object sender, EventArgs e)
+        {
+            Modules.Step.Toggle();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TriggerBot_Click(object sender, EventArgs e)
+        {
+            Modules.TriggerBot.Toggle();
         }
     }
 }

@@ -1,22 +1,22 @@
 ﻿using System;
-using Memory;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Client.Modules
 {
-    public class AirWalk
+    public class Step
     {
-        public static string Name = "AirWalk";
-        public static int key;
+        public static string Name = "Step";
+        public static Keys Key;
         public static bool toggeld;
 
         public static void Toggle()
         {
             toggeld = !toggeld;
-            
+
             if (toggeld)
             {
                 onEnable();
@@ -29,15 +29,15 @@ namespace Client.Modules
 
         public static void onEnable()
         {
-            
+            Client.Form1.m.WriteMemory(SDK.Entity.StepHeight, "float", "2");
         }
         public static void onDisable()
         {
-
+            Client.Form1.m.WriteMemory(SDK.Entity.StepHeight, "float", "0.56");
         }
         public static void onTick()
         {
-            Client.Form1.m.WriteMemory(SDK.Entity.VelocityY, "float", "0");
+            Client.Form1.m.WriteMemory(SDK.Entity.StepHeight, "float", "2");
         }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Client.Modules
+namespace Client.SDK
 {
-    public class Actor
+    public class Entity
     {
         public static string Player = "Minecraft.Windows.exe+03CDD138,0,18,B8,";
 
@@ -19,6 +19,7 @@ namespace Client.Modules
         public static string StepHeight = Player + "220";
         public static string CanFly = Player + "934";
         public static string IsFlying = Player + "928";
+
         public static string VelocityX = Player + "4DC";
         public static string VelocityY = Player + "4E0";
         public static string VelocityZ = Player + "4E4";

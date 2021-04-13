@@ -36,7 +36,7 @@ namespace Client.Modules
         }
         public static void onTick()
         {
-            Client.Form1.m.WriteMemory(Client.Modules.Actor.OnGround, "int", "1");
+            Client.Form1.m.WriteMemory(SDK.Entity.OnGround, "int", "1");
         }
     }
 }
