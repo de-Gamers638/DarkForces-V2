@@ -7,21 +7,21 @@ namespace Client.Utils
 { 
      public class Timer 
      {
-          private int currentTick = 0;     
+          public static int currentTick = 0;     
           
           public static void Reset()
           {
               currentTick = 0;
           }
           
-          public static void timerHasReached(int value, bool reset)
+          public static bool timerHasReached(int value, bool reset)
           {
               if (currentTick == value)
               {
                   
                   if (reset)
                   {
-                     reset();
+                     Reset();
                   }
                   return true;
               }
