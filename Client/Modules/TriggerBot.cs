@@ -16,7 +16,6 @@ namespace Client.Modules
         private const int LEFTUP = 0x0004;
         private const int LEFTDOWN = 0x0002;
         public int interval = 20;
-        bool click;
 
         public static void Toggle()
         {
@@ -43,7 +42,7 @@ namespace Client.Modules
         public static void onTick()
         {
             int check = Form1.m.ReadByte(SDK.Level.LookingActor);
-            if(check > 0)
+            if(check != 0)
             {
                 Client.Utils.Imports.mouse_event(dwFlags: LEFTUP, dx: 0, dy: 0, cButtons: 0, dwExtraInfo: 0);
                 Thread.Sleep(25);
