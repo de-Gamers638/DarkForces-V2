@@ -17,8 +17,10 @@ namespace Client.SDK
         //can be modified
         public static string OnGround = Player + "1C0";
         public static string StepHeight = Player + "220";
-        public static string CanFly = Player + "934";
+
         public static string IsFlying = Player + "928";
+        public static string CanFly = Player + "934";
+        public static string FlySpeed = Player + "958";
 
         public static string VelocityX = Player + "4DC";
         public static string VelocityY = Player + "4E0";

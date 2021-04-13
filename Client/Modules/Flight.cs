@@ -36,10 +36,12 @@ namespace Client.Modules
         {
             Client.Form1.m.WriteMemory(SDK.Entity.IsFlying, "byte", "0");
             Client.Form1.m.WriteMemory(SDK.Entity.CanFly, "byte", "0");
+            Client.Form1.m.WriteMemory(SDK.Entity.FlySpeed, "float", "0.05");
         }
         public static void onTick()
         {
             Client.Form1.m.WriteMemory(SDK.Entity.IsFlying, "byte", "1");
+            Client.Form1.m.WriteMemory(SDK.Entity.FlySpeed, "float", "0.2");
             Client.Form1.m.WriteMemory(SDK.Entity.CanFly, "byte", "1");
         }
     }
