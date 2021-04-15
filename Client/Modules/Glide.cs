@@ -40,7 +40,7 @@ namespace Client.Modules
         public static void onTick()
         {
             Client.Form1.m.WriteMemory(SDK.Entity.VelocityY, "float", GlideValue.ToString());
-            Utils.TimeUtil.Tick();
+            
             if(Utils.TimeUtil.timerHasReached(25, true))
             {
                 Client.Form1.m.WriteMemory(SDK.Entity.VelocityY, "float", "0.5");
