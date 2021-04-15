@@ -38,7 +38,7 @@ namespace Client.Modules
         }
         public static void onTick()
         {
-            Utils.TimeUtil.Tick();
+            
             if(Utils.TimeUtil.timerHasReached(40, true))
             {
                 Client.Form1.m.WriteMemory(SDK.Entity.VelocityY, "float", "0.5");
