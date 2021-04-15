@@ -54,7 +54,8 @@ namespace Client
             {
                 Modules.BounceGlide.onTick();
             }
-
+            
+            Utils.TimeUtil.Tick();
             onLoop();
         }
         private void AirWalk_Click(object sender, EventArgs e)
